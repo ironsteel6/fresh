@@ -1,6 +1,6 @@
 // routes/about.tsx
 
-/*
+
 export default function AboutPage() {
   return (
     <main>
@@ -9,8 +9,8 @@ export default function AboutPage() {
     </main>
   );
 }
-*/
 
+/*
 import { serve } from "https://deno.land/std@0.155.0/http/server.ts";
 
 const url = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
@@ -20,6 +20,7 @@ debugger;
 const body = new Uint8Array(await res.arrayBuffer());
 //await Deno.stdout.write(body);
 serve((req: Request) => new Response(body));
+*/
 
 
 /*
