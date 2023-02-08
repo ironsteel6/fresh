@@ -1,13 +1,14 @@
 // routes/about.tsx
 import { Handlers } from "$fresh/server.ts";
 import { serve } from "$fresh/server.ts";
+import { fetch } from "$fresh/server.ts";
 
 export const handler: Handlers = {
   GET(req) {
     const uuid = crypto.randomUUID();
     const url = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
 
-    //const res = await fetch(url);
+    const res = await fetch(url);
     //const body = new Uint8Array(await res.arrayBuffer());
     
     //return new Response(body));
