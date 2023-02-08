@@ -1,6 +1,18 @@
 // routes/about.tsx
 import { Handlers } from "$fresh/server.ts";
+import { serve } from "$fresh/server.ts";
 
+export const handler: Handlers = {
+  const url = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
+
+const res = await fetch(url);
+debugger;
+const body = new Uint8Array(await res.arrayBuffer());
+//await Deno.stdout.write(body);
+serve((req: Request) => new Response(body));
+};
+
+/* works for handler
 export const handler: Handlers = {
   GET(req) {
     const uuid = crypto.randomUUID();
@@ -9,6 +21,7 @@ export const handler: Handlers = {
     });
   },
 };
+*/
 
 /* about page works 
 export default function AboutPage() {
