@@ -11,7 +11,9 @@ export const handler: Handlers = {
     //const body = new Uint8Array(await res.arrayBuffer());
     
     //return new Response(body));
-    return new Response(uuid));
+    return new Response(JSON.stringify(uuid), {
+      headers: { "Content-Type": "application/json" },
+    });
   },
 };
 
