@@ -1,6 +1,6 @@
 // routes/about.tsx
 
-
+/* about page works 
 export default function AboutPage() {
   return (
     <main>
@@ -9,6 +9,17 @@ export default function AboutPage() {
     </main>
   );
 }
+*/
+
+import { Handlers } from "$fresh/server.ts";
+
+export const handler: Handlers = {
+  async GET(req, ctx) {
+    const resp = await ctx.render();
+    resp.headers.set("X-Custom-Header", "Hello");
+    return resp;
+  },
+};
 
 /*
 import { serve } from "https://deno.land/std@0.155.0/http/server.ts";
