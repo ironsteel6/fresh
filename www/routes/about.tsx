@@ -12,7 +12,7 @@ export const handler: Handlers = {
     
     //return new Response(body));
     return new Response(JSON.stringify(uuid), {
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "text/html" },
     });
   },
 };
