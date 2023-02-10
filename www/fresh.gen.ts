@@ -14,6 +14,7 @@ import * as $7 from "./routes/raw.ts";
 import * as $8 from "./routes/showcase.tsx";
 import * as $9 from "./routes/update.tsx";
 import * as $10 from "./routes/about.tsx";
+import * as $11 from "./routes/ironsteel6.tsx";
 import * as $$0 from "./islands/ComponentGallery.tsx";
 import * as $$1 from "./islands/CopyArea.tsx";
 import * as $$2 from "./islands/Counter.tsx";
@@ -33,6 +34,7 @@ const manifest = {
     "./routes/showcase.tsx": $8,
     "./routes/update.tsx": $9,
     "./routes/about.tsx": $10,
+    "./routes/ironsteel6.tsx": $10,
   },
   islands: {
     "./islands/ComponentGallery.tsx": $$0,
