@@ -11,12 +11,20 @@ interface User {
 export const handler: Handlers<User | null> = {
   async GET(_, ctx) {
     const { username } = ctx.params;
-    const resp = await fetch(`https://api.github.com/users/${username}`);
+    //const resp = await fetch(`https://api.github.com/users/${username}`);
+    const url = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
+    const res = await fetch(url);
+    const body = new Uint8Array(await res.arrayBuffer());
+    
+    return new Response(body));
+    
+    /* og
     if (resp.status === 404) {
       return ctx.render(null);
     }
     const user: User = await resp.json();
     return ctx.render(user);
+    */
   },
 };
 
