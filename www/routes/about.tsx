@@ -4,10 +4,9 @@ import { Handlers } from "$fresh/server.ts";
 import { fetch } from "$fresh/server.ts";
 import { serve } from "https://deno.land/std@0.155.0/http/server.ts";
 
+//serve((req: Request) => new Response("tsui"));
 
-serve((req: Request) => new Response("tsui"));
-
-/* works render uuid
+// works render uuid
 export const handler: Handlers = {
   GET(req) {
     const uuid = crypto.randomUUID();
@@ -22,7 +21,7 @@ export const handler: Handlers = {
     });
   },
 };
-*/
+//
 
 /*
 export const handler: Handlers = {
