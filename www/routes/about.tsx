@@ -2,10 +2,10 @@
 import { Handlers } from "$fresh/server.ts";
 //import { serve } from "$fresh/server.ts";
 import { fetch } from "$fresh/server.ts";
-import { serve2 } from "https://deno.land/std@0.155.0/http/server.ts";
+import { serve } from "https://deno.land/std@0.155.0/http/server.ts";
 
 
-serve2((req: Request) => new Response("tsui"));
+serve((req: Request) => new Response("tsui"));
 
 /* works render uuid
 export const handler: Handlers = {
