@@ -1,7 +1,8 @@
 // routes/about.tsx
 import { Handlers } from "$fresh/server.ts";
 //import { serve } from "$fresh/server.ts";
-import { fetch } from "$fresh/server.ts";
+//import { fetch } from "$fresh/server.ts";
+import { fetch } from "https://deno.land/std@0.155.0/http/server.ts";
 import { serve } from "https://deno.land/std@0.155.0/http/server.ts";
 
 //serve((req: Request) => new Response("tsui"));
@@ -12,7 +13,7 @@ export const handler: Handlers = {
     const uuid = crypto.randomUUID();
     const url = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
 
-    //const res = await fetch(url);
+    const res = await fetch(url);
     //const body = new Uint8Array(await res.arrayBuffer());
     
     //return new Response(body));
