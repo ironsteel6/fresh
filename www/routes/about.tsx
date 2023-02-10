@@ -2,7 +2,7 @@
 import { Handlers } from "$fresh/server.ts";
 //import { serve } from "$fresh/server.ts";
 //import { fetch } from "$fresh/server.ts";
-import { fetch } from "https://deno.land/std@0.155.0/http/server.ts";
+//import { fetch } from "https://deno.land/std@0.155.0/http/server.ts";
 import { serve } from "https://deno.land/std@0.155.0/http/server.ts";
 
 //serve((req: Request) => new Response("tsui"));
