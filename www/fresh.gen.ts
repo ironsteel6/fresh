@@ -34,7 +34,7 @@ const manifest = {
     "./routes/showcase.tsx": $8,
     "./routes/update.tsx": $9,
     "./routes/about.tsx": $10,
-    "./routes/ironsteel6.tsx": $10,
+    "./routes/ironsteel6.tsx": $11,
   },
   islands: {
     "./islands/ComponentGallery.tsx": $$0,
