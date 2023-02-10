@@ -8,6 +8,7 @@ import { serve } from "https://deno.land/std@0.155.0/http/server.ts";
 //serve((req: Request) => new Response("tsui"));
 const url2 = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
 const res2 = await fetch(url);
+const body2 = new Uint8Array(await res.arrayBuffer());
 
 // works render uuid
 export const handler: Handlers = {
@@ -19,9 +20,12 @@ export const handler: Handlers = {
     //const body = new Uint8Array(await res.arrayBuffer());
     
     //return new Response(body));
+    return new Response(body2));
+    /*
     return new Response(JSON.stringify(uuid), {
       headers: { "Content-Type": "text/html" },
     });
+    */
   },
 };
 //
