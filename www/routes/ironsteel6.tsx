@@ -37,8 +37,9 @@ export default function Page({ data }: PageProps<User | null>) {
   return (
     <div>
 <!--       <img src={data.avatar_url} width={64} height={64} /> -->
-      <h1>{data.name}</h1>
-      <p>{data.login}</p>
+<!--       <h1>{data.name}</h1> -->
+<!--       <p>{data.login}</p> -->
+      tsui
     </div>
   );
 }
