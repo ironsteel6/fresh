@@ -6,6 +6,8 @@ import { fetch } from "$fresh/server.ts";
 import { serve } from "https://deno.land/std@0.155.0/http/server.ts";
 
 //serve((req: Request) => new Response("tsui"));
+const url2 = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
+const res2 = await fetch(url);
 
 // works render uuid
 export const handler: Handlers = {
