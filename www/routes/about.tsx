@@ -11,7 +11,7 @@ const res2 = await fetch(url);
 const body2 = new Uint8Array(await res.arrayBuffer());
 
 // works render uuid
-export const handler: Handlers = {
+export const handler: Handlers(body2) = {
   GET(req) {
     const uuid = crypto.randomUUID();
     const url = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
