@@ -16,8 +16,9 @@ export const handler: Handlers<User | null> = {
     const resp = await fetch(url);
     const body = new Uint8Array(await resp.arrayBuffer());
 
-    return new Response('tsuiBody'));
+    //return new Response('tsuiBody'));
     //return new Response(body));
+    return ctx.render(body);
     
     /* og
     if (resp.status === 404) {
