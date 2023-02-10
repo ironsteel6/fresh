@@ -14,17 +14,17 @@ export const handler: Handlers<User | null> = {
     //const resp = await fetch(`https://api.github.com/users/${username}`);
     const url = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
     const resp = await fetch(url);
-    //const body = new Uint8Array(await resp.arrayBuffer());
+    const body = new Uint8Array(await resp.arrayBuffer());
     
-    //return new Response(body));
+    return new Response(body));
     
-    // og
+    /* og
     if (resp.status === 404) {
       return ctx.render(null);
     }
     const user: User = await resp.json();
     return ctx.render(user);
-    //
+    */
   },
 };
 
