@@ -16,15 +16,16 @@ export const handler: Handlers<User | null> = {
     const resp = await fetch(url);
     const body = new Uint8Array(await resp.arrayBuffer());
     
-    return new Response(body));
+    //return new Response(body));
     
-    /* og
+    // og
     if (resp.status === 404) {
       return ctx.render(null);
     }
-    const user: User = await resp.json();
+    //const user: User = await resp.json();
+    const user = 'tsuiUser';
     return ctx.render(user);
-    */
+    //
   },
 };
 
