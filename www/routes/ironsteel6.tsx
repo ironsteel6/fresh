@@ -20,20 +20,24 @@ export const handler: Handlers<User | null> = {
     //return new Response(body));
     //return ctx.render(body);
     
+    /*
     const tsuiFetch = () => {
       return fetch(url);;
     };
+    */
     
-    return new Response.body(tsuiFetch);
+    console.log(url)
     
-    /* og
+    //return new Response.body(tsuiFetch);
+    
+    //* og
     if (resp.status === 404) {
       return ctx.render(null);
     }
     //const user: User = await resp.json();
     //const user = 'tsuiUser';
     return ctx.render(user);
-    */
+    //*/
   },
 };
 
