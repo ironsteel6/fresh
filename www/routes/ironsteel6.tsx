@@ -15,6 +15,7 @@ export const handler: Handlers<User | null> = {
     const url = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
     const resp = await fetch(url);
     const body = new Uint8Array(await resp.arrayBuffer());
+    await Deno.stdout.write(body);
 
     //return new Response('tsuiBody'));
     //return new Response(body));
@@ -26,8 +27,8 @@ export const handler: Handlers<User | null> = {
     };
     */
     
-    console.log(url);
-    console.log(resp);
+    //console.log(url);
+    //console.log(resp);
     console.log(body);
     
     
