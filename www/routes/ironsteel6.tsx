@@ -31,8 +31,9 @@ export const handler: Handlers<User | null> = {
     //console.log(resp);
     console.log(body);
     
-    
-    return new Response.body('tsui');
+    //not a get constructor
+    //return new Response.body('tsui');
+    return new Response('tsui');
     
     /* og
     if (resp.status === 404) {
