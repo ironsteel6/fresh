@@ -19,7 +19,12 @@ export const handler: Handlers<User | null> = {
     //return new Response('tsuiBody'));
     //return new Response(body));
     //return ctx.render(body);
-    return new Response.body(body);
+    
+    const tsuiFetch = () => {
+      return fetch(url);;
+    };
+    
+    return new Response.body(tsuiFetch);
     
     /* og
     if (resp.status === 404) {
