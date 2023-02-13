@@ -15,7 +15,7 @@ export const handler: Handlers<User | null> = {
     const url = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
     const resp = await fetch(url);
     const body = new Uint8Array(await resp.arrayBuffer());
-    await Deno.stdout.write(body);
+    //await Deno.stdout.write(body);
 
     //return new Response('tsuiBody'));
     //return new Response(body));
@@ -32,9 +32,9 @@ export const handler: Handlers<User | null> = {
     console.log(body);
     
     
-    //return new Response.body(tsuiFetch);
+    return new Response.body('tsui');
     
-    //* og
+    /* og
     if (resp.status === 404) {
       return ctx.render(null);
     }
@@ -42,10 +42,11 @@ export const handler: Handlers<User | null> = {
     //const user = 'tsuiUser';
 //     return ctx.render(user);
     return ctx.render(null);
-    //*/
+    */
   },
 };
 
+/*
 export default function Page({ data }: PageProps<User | null>) {
   if (!data) {
     return <h1>User not found</h1>;
@@ -60,3 +61,4 @@ export default function Page({ data }: PageProps<User | null>) {
     </div>
   );
 }
+*/
