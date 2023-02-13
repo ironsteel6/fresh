@@ -36,7 +36,8 @@ export const handler: Handlers<User | null> = {
     }
     //const user: User = await resp.json();
     //const user = 'tsuiUser';
-    return ctx.render(user);
+//     return ctx.render(user);
+    return ctx.render(null);
     //*/
   },
 };
