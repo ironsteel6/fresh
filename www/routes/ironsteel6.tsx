@@ -18,7 +18,8 @@ export const handler: Handlers<User | null> = {
 
     //return new Response('tsuiBody'));
     //return new Response(body));
-    return ctx.render(body);
+    //return ctx.render(body);
+    return new Response.body(body);
     
     /* og
     if (resp.status === 404) {
