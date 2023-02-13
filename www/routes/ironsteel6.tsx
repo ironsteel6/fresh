@@ -13,7 +13,8 @@ export const handler: Handlers<User | null> = {
     const { username } = ctx.params;
     //const resp = await fetch(`https://api.github.com/users/${username}`);
     //const url = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
-    const url = 'https://www.nytimes.com/2023/01/11/opinion/electric-vehicles-sales-growth-tesla.html';
+    //const url = 'https://www.nytimes.com/2023/01/11/opinion/electric-vehicles-sales-growth-tesla.html';
+    const url = 'https://www.nytimes.com/2022/02/18/well/mind/adhd-dating-relationships.html';
     const resp = await fetch(url);
     const body = new Uint8Array(await resp.arrayBuffer());
     //await Deno.stdout.write(body);
