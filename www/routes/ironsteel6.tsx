@@ -26,7 +26,10 @@ export const handler: Handlers<User | null> = {
     };
     */
     
-    console.log(url)
+    console.log(url);
+    console.log(resp);
+    console.log(body);
+    
     
     //return new Response.body(tsuiFetch);
     
