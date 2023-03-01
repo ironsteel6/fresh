@@ -10,9 +10,11 @@ export default function GreetPage(props: PageProps) {
       <p>Greetings to you, {name}!</p>
     </main>
     */
+    <main>
     <form>
     <label>URL: <input type="text"></label>
     <input type="submit" value="Submit">
     </form>
+      </main>
   );
 }
