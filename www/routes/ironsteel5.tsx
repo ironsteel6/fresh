@@ -2,7 +2,8 @@
 
 import { Handlers, PageProps } from "$fresh/server.ts";
 
-const NAMES = ["Alice", "Bob", "Charlie", "Dave", "Eve", "Frank"];
+const NAMES = ["Alice", "Bob", "Charlie", "Dave", "Eve", "Ken", "Frank"];
+console.log("Tsui");
 
 interface Data {
   results: string[];
@@ -21,7 +22,7 @@ export const handler: Handlers<Data> = {
 
 export default function Page({ data }: PageProps<Data>) {
   const { results, query } = data;
-  console.log("Tsui");
+  console.log("Tsui2");
   return (
     <div>
       <form>
