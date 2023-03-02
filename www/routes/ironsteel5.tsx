@@ -13,6 +13,7 @@ export const handler: Handlers<Data> = {
   GET(req, ctx) {
     debugger;
     const url = new URL(req.url);
+    console.print(url);
     const query = url.searchParams.get("q") || "";
     const results = NAMES.filter((name) => name.includes(query));
     return ctx.render({ results, query });
@@ -27,11 +28,9 @@ export default function Page({ data }: PageProps<Data>) {
         <input type="text" name="q" value={query} />
         <button type="submit">Search</button>
       </form>
-      /*
       <ul>
         {results.map((name) => <li key={name}>{name}</li>)}
       </ul>
-      */
     </div>
   );
 }
