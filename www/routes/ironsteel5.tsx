@@ -21,7 +21,7 @@ export const handler: Handlers<Data> = {
 
 export default function Page({ data }: PageProps<Data>) {
   const { results, query } = data;
-  console.log(data);
+  console.log("Tsui");
   return (
     <div>
       <form>
