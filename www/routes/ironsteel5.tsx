@@ -11,10 +11,10 @@ interface Data {
 
 export const handler: Handlers<Data> = {
   GET(req, ctx) {
-    debugger;
     const url = new URL(req.url);
     const query = url.searchParams.get("q") || "";
     const results = NAMES.filter((name) => name.includes(query));
+    console.log(url);
     return ctx.render({ results, query });
   },
 };
