@@ -26,9 +26,11 @@ export default function Page({ data }: PageProps<Data>) {
         <input type="text" name="q" value={query} />
         <button type="submit">Search</button>
       </form>
+      /*
       <ul>
         {results.map((name) => <li key={name}>{name}</li>)}
       </ul>
+      */
     </div>
   );
 }
