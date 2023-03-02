@@ -13,7 +13,6 @@ export const handler: Handlers<Data> = {
   GET(req, ctx) {
     debugger;
     const url = new URL(req.url);
-    console.print(url);
     const query = url.searchParams.get("q") || "";
     const results = NAMES.filter((name) => name.includes(query));
     return ctx.render({ results, query });
