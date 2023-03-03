@@ -4,7 +4,7 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 
 const NAMES = ["Alice", "Bob", "Charlie", "Dave", "Eve", "Ken", "Frank"];
 console.log("ironsteel5Tsui1");
-debugger;
+//debugger; - doesnt trigger breakpoint.
 
 interface Data {
   results: string[];
