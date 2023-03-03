@@ -29,7 +29,6 @@ export const handler: Handlers = {
       headers: { "Content-Type": "text/html" },
     });
   },
-  console.log("Tsui3");
 };
 //
 
