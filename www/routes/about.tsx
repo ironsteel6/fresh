@@ -4,6 +4,7 @@ import { Handlers } from "$fresh/server.ts";
 import { fetch } from "$fresh/server.ts";
 //import { fetch } from "https://deno.land/std@0.155.0/http/server.ts";
 import { serve } from "https://deno.land/std@0.155.0/http/server.ts";
+//appears in deploy log file
 console.log("Tsui1");
 
 //serve((req: Request) => new Response("tsui"));
@@ -19,7 +20,6 @@ export const handler: Handlers = {
   GET(req) {
     const uuid = crypto.randomUUID();
     const url = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
-    Deno.stdout.write(url);
     
     //const res = await fetch(url);
     //const body = new Uint8Array(await res.arrayBuffer());
