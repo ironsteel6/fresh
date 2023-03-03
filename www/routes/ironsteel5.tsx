@@ -16,6 +16,7 @@ export const handler: Handlers<Data> = {
     const query = url.searchParams.get("q") || "";
     const results = NAMES.filter((name) => name.includes(query));
     console.log("is5T2_url");
+    debugger;
     console.log(url);
     return ctx.render({ results, query });
   },
