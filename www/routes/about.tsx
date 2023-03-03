@@ -4,6 +4,7 @@ import { Handlers } from "$fresh/server.ts";
 import { fetch } from "$fresh/server.ts";
 //import { fetch } from "https://deno.land/std@0.155.0/http/server.ts";
 import { serve } from "https://deno.land/std@0.155.0/http/server.ts";
+console.log("Tsui1");
 
 //serve((req: Request) => new Response("tsui"));
 
@@ -15,12 +16,11 @@ const body2 = new Uint8Array(await res.arrayBuffer());
 
 // works render uuid
 export const handler: Handlers = {
+  console.log("Tsui2");
   GET(req) {
     const uuid = crypto.randomUUID();
     const url = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
-    debugger;
-    console.log("Tsui2");
-
+    
     //const res = await fetch(url);
     //const body = new Uint8Array(await res.arrayBuffer());
     
@@ -29,6 +29,7 @@ export const handler: Handlers = {
       headers: { "Content-Type": "text/html" },
     });
   },
+  console.log("Tsui3");
 };
 //
 
