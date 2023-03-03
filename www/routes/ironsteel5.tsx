@@ -3,7 +3,7 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 
 const NAMES = ["Alice", "Bob", "Charlie", "Dave", "Eve", "Ken", "Frank"];
-console.log("Tsui");
+console.log("ironsteel5Tsui1");
 
 interface Data {
   results: string[];
@@ -15,6 +15,7 @@ export const handler: Handlers<Data> = {
     const url = new URL(req.url);
     const query = url.searchParams.get("q") || "";
     const results = NAMES.filter((name) => name.includes(query));
+    console.log("is5T2_url");
     console.log(url);
     return ctx.render({ results, query });
   },
@@ -22,7 +23,7 @@ export const handler: Handlers<Data> = {
 
 export default function Page({ data }: PageProps<Data>) {
   const { results, query } = data;
-  console.log("Tsui2");
+  console.log("is5T3");
   return (
     <div>
       <form>
