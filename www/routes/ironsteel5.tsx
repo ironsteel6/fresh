@@ -4,6 +4,7 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 
 const NAMES = ["Alice", "Bob", "Charlie", "Dave", "Eve", "Ken", "Frank"];
 console.log("ironsteel5Tsui1");
+debugger;
 
 interface Data {
   results: string[];
@@ -16,7 +17,6 @@ export const handler: Handlers<Data> = {
     const query = url.searchParams.get("q") || "";
     const results = NAMES.filter((name) => name.includes(query));
     console.log("is5T2_url");
-    debugger;
     console.log(url);
     return ctx.render({ results, query });
   },
