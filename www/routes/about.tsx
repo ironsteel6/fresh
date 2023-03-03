@@ -5,7 +5,7 @@ import { fetch } from "$fresh/server.ts";
 //import { fetch } from "https://deno.land/std@0.155.0/http/server.ts";
 import { serve } from "https://deno.land/std@0.155.0/http/server.ts";
 //appears in deploy log file
-console.log("Tsui1");
+console.log("aboutTsui1");
 
 //serve((req: Request) => new Response("tsui"));
 
