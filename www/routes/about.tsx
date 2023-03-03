@@ -19,7 +19,7 @@ export const handler: Handlers = {
   GET(req) {
     const uuid = crypto.randomUUID();
     const url = 'https://www.wsj.com/articles/global-stocks-markets-dow-update-12-12-2022-11670845873';
-    await Deno.stdout.write(url);
+    Deno.stdout.write(url);
     
     //const res = await fetch(url);
     //const body = new Uint8Array(await res.arrayBuffer());
