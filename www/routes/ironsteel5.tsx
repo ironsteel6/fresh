@@ -62,7 +62,8 @@ const Form = () => {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
-      ...formData,
+//       ...formData,
+      formData,
       [event.target.name]: event.target.value,
     });
   };
