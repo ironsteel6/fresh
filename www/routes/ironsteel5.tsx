@@ -1,5 +1,5 @@
 // routes/search.tsx
-
+/*
 import { Handlers, PageProps } from "$fresh/server.ts";
 
 const NAMES = ["Alice", "Bob", "Charlie", "Dave", "Eve", "Ken", "Frank"];
@@ -37,3 +37,73 @@ export default function Page({ data }: PageProps<Data>) {
     </div>
   );
 }
+*/
+
+import React, { useState } from "react";
+import { renderToString } from "react-dom/server";
+
+type FormData = {
+  name: string;
+  email: string;
+  password: string;
+};
+
+const Form = () => {
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(formData);
+  };
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+        />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
+
+const formHtml = renderToString(<Form />);
+
+console.log(formHtml);
