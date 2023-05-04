@@ -1,5 +1,4 @@
 // routes/search.tsx
-/*
 import { Handlers, PageProps } from "$fresh/server.ts";
 
 const NAMES = ["Alice", "Bob", "Charlie", "Dave", "Eve", "Ken", "Frank"];
@@ -37,8 +36,9 @@ export default function Page({ data }: PageProps<Data>) {
     </div>
   );
 }
-*/
 
+/*
+//broken chatGPT
 import React, { useState } from "react";
 import { renderToString } from "react-dom/server";
 
@@ -108,3 +108,4 @@ const Form = () => {
 const formHtml = renderToString(<Form />);
 
 console.log(formHtml);
+*/
