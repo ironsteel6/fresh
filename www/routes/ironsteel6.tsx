@@ -17,7 +17,8 @@ export const handler: Handlers<User | null> = {
     //const url = 'https://www.nytimes.com/2022/02/18/well/mind/adhd-dating-relationships.html';
     //const url = 'https://www.chicagotribune.com/politics/elections/ct-chicago-election-voter-turnout-20230228-7v33ulb4r5crxareze3c2ypvmy-story.html';
     //const url = 'https://www.nytimes.com/2023/03/28/well/live/nap-benefits-sleep-loss.html';
-    const url = 'https://www.nytimes.com/2023/05/04/well/eat/ultraprocessed-food-mental-health.html';
+    //const url = 'https://www.nytimes.com/2023/05/04/well/eat/ultraprocessed-food-mental-health.html';
+    const url = 'https://www.readallcomics.com'
     const resp = await fetch(url);
     const body = new Uint8Array(await resp.arrayBuffer());
     //await Deno.stdout.write(body);
