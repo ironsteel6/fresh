@@ -18,7 +18,7 @@ export const handler: Handlers = {
   return (
     <>
       <form id="tsuiForm" action="/reader" method="post">
-        <input type="url" name="urlFromUI" value="https://www.nytimes.com/" />
+        <input type="url" name="urlFromUI" onfocus="this.value=''" value="https://www.nytimes.com/" />
         <button type="submit">Submit</button>
       </form>
     </>
