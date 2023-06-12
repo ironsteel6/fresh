@@ -4,6 +4,7 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 const NAMES = ["Alice", "Bob", "Charlie", "Dave", "Eve", "Ken", "Frank"];
 console.log("ironsteel5Tsui1");
 //debugger; - doesnt trigger breakpoint.
+//debugger;
 
 interface Data {
   results: string[];
@@ -12,18 +13,16 @@ interface Data {
 
 export const handler: Handlers<Data> = {
   GET(req, ctx) {
-    const url = new URL(req.url);
+    // const url = new URL(req.url);
+    const url = new URL("http://localhost:8000/ironsteel6");
     const query = url.searchParams.get("q") || "";
     const results = NAMES.filter((name) => name.includes(query));
-    console.log("is5T2_url");
-    console.log(url);
     return ctx.render({ results, query });
   },
 };
 
 export default function Page({ data }: PageProps<Data>) {
   const { results, query } = data;
-  console.log("is5T3");
   return (
     <div>
       <form>
