@@ -1,10 +1,21 @@
-// routes/greet/[name].tsx
+import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 
-import { PageProps } from "$fresh/server.ts";
+const app = new Application();
+const router = new Router();
 
-export default function GreetPage(props: PageProps) {
-  const { name } = props.params;
-  return (
-    <iframe src="https://calendar.google.com/calendar/embed?src=4e820b986d66b46b3da84ba9e914f116a37261c8605da8dbe203ca538842d1d1%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-  );
-}
+router.get("/calendar", (ctx) => {
+  ctx.response.body = `
+    <html>
+      <body>
+        <iframe src="https://calendar.google.com/calendar/embed?src=4e820b986d66b46b3da84ba9e914f116a37261c8605da8dbe203ca538842d1d1%40group.calendar.google.com&ctz=America%2FChicago" 
+          style="border: 0" width="800" height="600" frameborder="0" scrolling="no">
+        </iframe>
+      </body>
+    </html>
+  `;
+});
+
+app.use(router.routes());
+app.use(router.allowedMethods());
+
+await app.listen({ port: 8000 });
